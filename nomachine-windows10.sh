@@ -5,12 +5,13 @@ NGROK_TOKEN="2Se7QKvfXFYzwei9Q7PZYfArMlF_3idEDMzfXikrJfRWzk54J"
 SERVER_REGION="sa"
 
 # Configurando ngrok
-wget -O ng.sh https://raw.githubusercontent.com/Classickkk/DATAVERSE-CLOUD-V1/main/ngrok.sh > /dev/null 2>&1
-chmod +x ng.sh
-./ng.sh authtoken $NGROK_TOKEN 
+echo "CRIE SEU TOKEN AQUI: https://dashboard.ngrok.com/get-started/your-authtoken"
+CRP=$NGROK_TOKEN
 
 # Iniciando ngrok
-./ng.sh tcp --region $SERVER_REGION 4000 &>/dev/null &
+ngrok authtoken $CRP
+
+ngrok tcp --region $SERVER_REGION 4000 &>/dev/null &
 sleep 1
 if curl --silent --show-error http://127.0.0.1:4040/api/tunnels >/dev/null 2>&1; then
   echo "OK"
