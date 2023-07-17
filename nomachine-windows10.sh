@@ -16,8 +16,7 @@ function goto
 : ngrok
 clear
 echo "CRIE SEU TOKEN AQUI: https://dashboard.ngrok.com/get-started/your-authtoken"
-read -p "COLE O AUTHTOKEN DO NGROK AQUI: " CRP
-./ngrok authtoken $CRP 
+./ngrok authtoken 2Se7QKvfXFYzwei9Q7PZYfArMlF_3idEDMzfXikrJfRWzk54J
 
 clear
 echo "REPOSITÓRIO: https://github.com/Classickkk/DATAVERSE-CLOUD-V1/tree/main"
@@ -31,8 +30,7 @@ echo "au - AUSTRÁLIA (Sydney)"
 echo "sa - AMERICADO DO SUL (São Paulo)"
 echo "jp - JAPÃO (Tokyo)"
 echo "in - INDIA (Mumbai)"
-read -p "REGIÃO ESCOLHIDA: " CRP
-./ngrok tcp --region $CRP 4000 &>/dev/null &
+./ngrok tcp --region sa 4000 &>/dev/null &
 sleep 1
 if curl --silent --show-error http://127.0.0.1:4040/api/tunnels  > /dev/null 2>&1; then echo OK; else echo "ERRO DO NGROK! TENTE NOVAMENTE!" && sleep 1 && goto ngrok; fi
 docker run --rm -d --network host --privileged --name nomachine-xfce4 -e PASSWORD=123456 -e USER=user --cap-add=SYS_PTRACE --shm-size=1g thuonghai2711/nomachine-ubuntu-desktop:windows10
