@@ -3,11 +3,14 @@ echo "BAIXANDO ARQUIVOS"
 wget https://raw.githubusercontent.com/Classickkk/DATAVERSE-CLOUD-V1/main/post-setup/obs.sh
 wget https://raw.githubusercontent.com/Classickkk/DATAVERSE-CLOUD-V1/main/post-setup/filezilla.sh
 wget https://raw.githubusercontent.com/Classickkk/DATAVERSE-CLOUD-V1/main/post-setup/VSCode.sh
-
-echo "APLICANDO PERMISSÕES DE EXECUÇÃO NOS ARQUIVOS BAIXADOS"
 chmod +x obs.sh
 chmod +x filezilla.sh
 chmod +x VSCode.sh
+mkdir /home/user/Desktop/Instaladores/
+mv filezilla.sh /home/user/Desktop/Instaladores/
+mv obs.sh /home/user/Desktop/Instaladores/
+mv VSCode.sh /home/user/Desktop/Instaladores/
+
 
 echo "DESEJA INSTALAR OS PROGRAMAS? (Y/N)"
 read resposta
