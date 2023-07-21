@@ -23,7 +23,9 @@ if [[ $resposta == "Y" || $resposta == "y" ]]; then
     ./VSCode.sh
     clear
     echo "TODOS OS PROGRAMAS INSTALADOS COM SUCESSO!"
+    rm post-install.sh
 else
     clear
     echo "INSTALAÇÃO ENCERRADA,TODOS OS INSTALADORES SE ENCONTRAM NA AREA DE TRABALHO E PODEM SER INSTALADOS MANUALMENTE DE ACORDO COM SUA NECESSIDADE"
+    rm post-install.sh
 fi
