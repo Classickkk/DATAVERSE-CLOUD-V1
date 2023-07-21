@@ -11,8 +11,8 @@ mv filezilla.sh /home/user/Desktop/Instaladores/
 mv obs.sh /home/user/Desktop/Instaladores/
 mv VSCode.sh /home/user/Desktop/Instaladores/
 
-
-echo "DESEJA INSTALAR OS PROGRAMAS? (Y/N)"
+clear
+echo "TODOS OS PROGRAMAS BAIXADOS DESEJA INSTALAR TODOS OS PROGRAMAS AGORA? (Y/N)"
 read resposta
 
 if [[ $resposta == "Y" || $resposta == "y" ]]; then
@@ -24,5 +24,6 @@ if [[ $resposta == "Y" || $resposta == "y" ]]; then
     clear
     echo "TODOS OS PROGRAMAS INSTALADOS COM SUCESSO!"
 else
-    echo "INSTALAÇÃO CANCELADA"
+    clear
+    echo "INSTALAÇÃO ENCERRADA,TODOS OS INSTALADORES SE ENCONTRAM NA AREA DE TRABALHO E PODEM SER INSTALADOS MANUALMENTE DE ACORDO COM SUA NECESSIDADE"
 fi
